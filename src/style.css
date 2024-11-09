@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Gabarito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px black;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.navbar__s1__title {
+    color: #9B41D5;
+}
+
+.navbar__s2 {
+    border: solid 1px black;
+    width: 60%;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.navbar__s2__input {
+    width: 60%;
+    border: none;
+    background-color: transparent;
+}
+
+.navbar__s2__input:focus {
+    outline: none;
+}
+
+.navbar__s3 {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar__1 {
+    display: flex;
+    justify-content: space-around;
+    padding: 8px;
+    border-bottom: solid 1px black;
+
+}
+
+.navbar__1__menu__1 {
+    background-color: #9B41D5;
+    border-radius: 30px;
+    color: white;
+    border: 1px solid #9B41D5;
+    padding-left:  10px;
+    padding-right: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    
+}
+
+.menu__bar {
+    display: none;
+}
+
+
+.title__image {
+    position: relative;
+
+}
+
+.offer-box__container {
+    border: solid 2px black;
+    position: absolute;
+    padding: 2%;
+    width: 35%;
+    animation-name: zoom;
+    animation-duration: 2s;
+    background-color: white;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    top: 10%;
+    left: 10%;
+}
+
+.title__image img {
+    width: 100%;
+
+}
+
+.offer-box__container p {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.recommed__section {
+    margin-top: 10px;
+    padding: 10px;
+   
+}
+
+.course__card img {
+    width: 100%;
+    height:60%;
+}
+
+.course__card {
+    flex-basis: 20%;
+    flex-grow: 1;
+  
+}
+
+.recommed__container {
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    gap:50px;
+    margin-top: 10px;
+
+}
+
+.topics__container p {
+    border: gray 2px solid;
+    padding: 10px;
+    flex-grow: 1;
+    flex-basis: 25%;
+
+}
+
+.topics__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.popular {
+    margin-top: 10px;
+    padding: 20px;
+}
+
+.footer__one {
+    display: flex;
+    gap: 30px;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    margin-top: 10px;
+    padding: 10px;
+    border-bottom: solid 5px white;
+}
+
+.footer__two {
+    margin-top: 20px;
+}
+
+.footer__one p,
+.footer__two p {
+    margin-top: 10px;
+}
+
+.navbar__1__menu__1:hover {
+    background-color: transparent;
+    border: 1px solid black;
+    color: #8c13dd;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+.course-card__button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.course-card__button1,
+.course-card__button2 {
+    background-color: transparent;
+    padding: 5px;
+    color: #8c13dd;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    border-radius: 5px;
+
+}
+
+.course-card__button1:hover {
+    background-color: #8c13dd;
+    color: white;
+    transition: 1s;
+}
+
+.course-card__button2:hover {
+    background-color: #8c13dd;
+    color: white;
+    transition: 1s;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
+
+
+.mylearning {
+    position: relative;
+}
+
+.mylearning__popup {
+    position: absolute;
+    background-color: white;
+    color: black;
+    width: 100px;
+    border: 1px solid black;
+    padding: 10px;
+    right: 0;
+    top: 25px;
+    display: none;
+    border-radius: 10px;
+}
+
+.mylearning:hover {
+    .mylearning__popup {
+        display: block;
+        transition: 5s;
+    }
+
+    transition: 5s;
+}
+
+@media screen and (max-width:800px) {
+    .course__card img {
+        height: 150px;
+    }
+}
+    
+    .offer-box__container h1,
+    .offer-box__container p {
+        font-size: 15px;
+
+}
+
+@media screen and (max-width:600px) {
+    body {
+        font-size: 10px;
+    }
+
+    .course__card {
+        width: 40%;
+    }
+
+    .menu__bar {
+        display: block;
+    }
+
+    .navbar__s2,
+    .navbar__s3 {
+        display: none;
+    }
+
+    .offer-box__container h1,
+    .offer-box__container p {
+        font-size: 11px;
+
+    }
+    .navbar__1{
+        display: none;
+    }
+
+
+}
